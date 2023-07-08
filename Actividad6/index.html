@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Actividades Diarias</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="app.js"></script>
+</head>
+<body onload="actualizarTabla();">
+
+<div class="container">
+    <h2>Registro de Actividades Diarias</h2>
+    <form onsubmit="event.preventDefault(); agregarActividad();">
+        <div class="form-group">
+            <label for="actividad">Actividad:</label>
+            <input type="text" class="form-control" id="actividad" placeholder="Ingresa la actividad">
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" class="form-control" id="fecha">
+        </div>
+        <button type="submit" class="btn btn-default">Agregar</button>
+    </form>
+
+    <h3>Registros</h3>
+    <table class="table" id="tabla">
+        <thead>
+            <tr>
+                <th>Actividad</th>
+                <th>Fecha</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+</body>
+</html>
